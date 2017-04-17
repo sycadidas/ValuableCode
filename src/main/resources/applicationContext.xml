@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd"
+	default-autowire="byName">
+
+
+   <!-- 简单的连接数据库,没有使用连接池,每次创建连接都会new 一个connection -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<!--注意一下&characterEncoding要修改为&amp;characterEncoding -->
+		<property name="url"
+			value="jdbc:mysql://10.126.44.55:4307/npop_gomepop_uat?useUnicode=true&amp;characterEncoding=utf-8" />
+		<property name="username" value="pw_gomepop_uat" />
+		<property name="password" value="npop_gomepop_uat" />
+	</bean>
+	
+	<bean id="baseDAO" class="com.gome.pop.ScanMysql2Es.base.BaseDAO" > 
+        <property name="dataSource"> 
+            <ref bean="dataSource"/> 
+        </property> 
+    </bean> 
+
+
+</beans>
