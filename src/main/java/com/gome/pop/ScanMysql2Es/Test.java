@@ -16,7 +16,7 @@ public class Test {
 		
 		
 		int count = Start.countSql(); //总数
-		int page_size=10000; //每次10w条
+		int page_size=100000; //每次10w条
 		int pages = count / page_size + 1; // 一共开多少个线程
 		
 		System.out.println("一共开启了"+pages+"个线程");
