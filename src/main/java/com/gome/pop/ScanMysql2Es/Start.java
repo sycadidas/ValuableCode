@@ -82,7 +82,7 @@ public class Start
 		
 		try {
 			client = TransportClient.builder().build()  
-		            .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("10.58.62.47"), 9300));
+		            .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("10.58.70.87"), 9300));//ES生产集群
 			//10.58.62.47 杨宇集群
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -110,7 +110,7 @@ public class Start
 	            	  jsonObj.put(columnName, value);
 	              }
 	          }   
-	          bulkRequest.add(client.prepareIndex("sub_order_test",
+	          bulkRequest.add(client.prepareIndex("sub_order",
 						"tbl_sub_order").setId(set.getString("SUB_ORDER_ID")).setSource(jsonObj.toString()));
 	      }
 	      System.out.println("线程"+Thread.currentThread().getName()+"处理了"+ss+"条数据");
