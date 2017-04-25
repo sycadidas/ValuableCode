@@ -82,8 +82,8 @@ public class Start
 		
 		try {
 			client = TransportClient.builder().build()  
-		            .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("10.58.70.87"), 9300));//ES生产集群
-			//10.58.62.47 杨宇集群
+		            .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("10.58.62.47"), 9300));//10.58.62.47 杨宇集群
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

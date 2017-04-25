@@ -14,9 +14,9 @@
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<!--注意一下&characterEncoding要修改为&amp;characterEncoding -->
 		<property name="url"
-			value="jdbc:mysql://10.58.46.171:3306/gomepop?useUnicode=true&amp;characterEncoding=utf-8" />
-		<property name="username" value="prd_pr_pop" />
-		<property name="password" value="rK6uIrM02chdD5gy" />
+			value="jdbc:mysql://10.126.44.55:4306/npop_gomepop_uat?useUnicode=true&amp;characterEncoding=utf-8" />
+		<property name="username" value="pw_gomepop_uat" />
+		<property name="password" value="npop_gomepop_uat" />
 	</bean>
 	
 	<bean id="baseDAO" class="com.gome.pop.ScanMysql2Es.base.BaseDAO" > 
