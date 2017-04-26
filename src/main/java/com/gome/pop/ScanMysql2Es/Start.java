@@ -52,7 +52,7 @@ public class Start
 	      
 		  BulkRequestBuilder bulkRequest = client.prepareBulk();
 		 
-		int ss=0;
+		  int ss=0;
 		
 		
 	      while(set.next()){
